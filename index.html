@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>tip-split</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>tip-split</h1>
+      <p class="sub">tip calculator + bill splitter.</p>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <label for="bill">bill amount</label>
+        <div class="money">
+          <span class="cur">$</span>
+          <input id="bill" type="number" min="0" step="0.01" value="84.30" />
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="tip">tip <span class="muted">(<output id="tipOut">18</output>%)</span></label>
+        <input id="tip" type="range" min="0" max="30" step="1" value="18" />
+      </div>
+
+      <div class="row">
+        <label for="people">people</label>
+        <input id="people" type="number" min="1" step="1" value="3" />
+      </div>
+    </section>
+
+    <section class="card totals">
+      <div class="line">
+        <span>bill</span>
+        <span id="outBill">$0.00</span>
+      </div>
+      <div class="line">
+        <span>tip</span>
+        <span id="outTip">$0.00</span>
+      </div>
+      <div class="line big">
+        <span>total with tip</span>
+        <span id="outTotal">$0.00</span>
+      </div>
+      <div class="line">
+        <span>per person</span>
+        <span id="outPlain">$0.00</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
