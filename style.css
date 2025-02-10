@@ -8,6 +8,7 @@
   --muted: #8a93a3;
   --accent: #7cc4ff;
   --good: #7ee0a3;
+  --warn: #ffb86b;
 }
 
 html, body {
@@ -107,7 +108,39 @@ input[type="range"] {
 
 .line.big span:last-child { color: var(--good); }
 
+.modes {
+  display: grid;
+  gap: 12px;
+}
+
+.mode {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 14px;
+  background: #11141b;
+}
+
+.mode h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.mode .line {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.mode [data-diff] { color: var(--warn); }
+
 .muted { color: var(--muted); }
+.small { font-size: 12.5px; }
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
 
 @media (max-width: 520px) {
   .row { grid-template-columns: 1fr; }

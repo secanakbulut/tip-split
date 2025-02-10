@@ -10,7 +10,7 @@
   <main class="wrap">
     <header>
       <h1>tip-split</h1>
-      <p class="sub">tip calculator + bill splitter.</p>
+      <p class="sub">tip calculator that splits the bill fairly even when the math does not divide evenly.</p>
     </header>
 
     <section class="card">
@@ -47,8 +47,41 @@
         <span id="outTotal">$0.00</span>
       </div>
       <div class="line">
-        <span>per person</span>
+        <span>plain per person</span>
         <span id="outPlain">$0.00</span>
+      </div>
+      <p id="exactNote" class="muted small"></p>
+    </section>
+
+    <section class="card">
+      <h2>three ways to split the leftover cents</h2>
+      <p class="muted small">when the total does not divide evenly across the group, somebody has to give a little or take a little. pick how.</p>
+
+      <div class="modes">
+        <article class="mode" id="modeA">
+          <h3>A. nearest cent, last person absorbs</h3>
+          <p class="muted small">everyone pays the rounded share. the last person pays the leftover cents so the math closes exactly.</p>
+          <div class="line"><span>each person</span><span data-each>-</span></div>
+          <div class="line"><span>last person</span><span data-last>-</span></div>
+          <div class="line"><span>group pays in total</span><span data-paid>-</span></div>
+          <div class="line"><span>vs bill+tip</span><span data-diff>-</span></div>
+        </article>
+
+        <article class="mode" id="modeB">
+          <h3>B. round each share up to whole currency</h3>
+          <p class="muted small">round every share up to the next whole dollar. the group ends up paying a small surplus, easier to count cash.</p>
+          <div class="line"><span>each person</span><span data-each>-</span></div>
+          <div class="line"><span>group pays in total</span><span data-paid>-</span></div>
+          <div class="line"><span>surplus over bill</span><span data-diff>-</span></div>
+        </article>
+
+        <article class="mode" id="modeC">
+          <h3>C. ceiling per person</h3>
+          <p class="muted small">round the per-person amount up to the next cent so the group fully covers the rounding. nobody is short, everyone pays the same.</p>
+          <div class="line"><span>each person</span><span data-each>-</span></div>
+          <div class="line"><span>group pays in total</span><span data-paid>-</span></div>
+          <div class="line"><span>tiny surplus</span><span data-diff>-</span></div>
+        </article>
       </div>
     </section>
   </main>
