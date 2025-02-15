@@ -84,6 +84,26 @@
         </article>
       </div>
     </section>
+
+    <section class="card math">
+      <h2>the math</h2>
+      <p>start with <code>T = bill * (1 + tip)</code>. then per person is <code>T / n</code>. when that does not land on a clean cent, you have three honest options.</p>
+      <table>
+        <thead>
+          <tr><th>mode</th><th>each person pays</th><th>who covers the gap</th><th>group total vs T</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>A</td><td>round(T/n) to nearest cent</td><td>last person, by a few cents</td><td>= T exactly</td></tr>
+          <tr><td>B</td><td>ceil(T/n) to whole currency</td><td>the group, by up to ~n</td><td>&gt;= T</td></tr>
+          <tr><td>C</td><td>ceil(T/n) to nearest cent</td><td>the group, by &lt; n cents</td><td>&gt;= T</td></tr>
+        </tbody>
+      </table>
+      <p class="muted small">A is fairest when one person does not mind being the closer. B is fastest with cash. C is the polite default when everyone venmos the same number.</p>
+    </section>
+
+    <footer>
+      <p class="muted small">no deps, no tracking, runs in the browser.</p>
+    </footer>
   </main>
 
   <script src="app.js"></script>
