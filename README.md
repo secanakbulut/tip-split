@@ -1,5 +1,7 @@
 # tip-split
 
+![](docs/screenshot.png)
+
 small tip calculator I made one evening because I got tired of arguing about who pays the extra cent.
 
 it splits a bill across n people and shows three honest ways to handle the leftover when the math does not divide evenly. you can pick whichever feels right for the table.
